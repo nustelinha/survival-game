@@ -21,7 +21,6 @@ local function onPromptTriggered(promptObject, player)
 
     local foodValue = foodModel.Food.Value
 
-    print(foodModel.Name, foodValue)
     local currentHunger = PlayerModule.GetHunger(player)
     PlayerModule.SetHunger(player, currentHunger + foodValue)
     PlayerHungerUpdated:FireClient(player, PlayerModule.GetHunger(player))
